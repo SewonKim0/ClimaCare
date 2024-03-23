@@ -1,13 +1,29 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router(); // Create a router instance
-
+const nodemailer = require('nodemailer');
 const key = "5a3c7f422f150fc9680b12b0ac6468e6";
-
+router.use(express.urlencoded({ extended: true }));
 // Endpoint to get air quality by zip code
-router.get('/airquality', async (req, res) => {
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // e.g., 'gmail', 'hotmail', etc.
+  auth: {
+    user: 'alexhackathon123@gmail.com', // Your email address
+    pass: 'pkrglymonkfiokqe' // Your email password
+  }
+});
+
+
+router.post('/airquality', async (req, res) => {
+  console.log('Request received:', req.body); // TEST
+  
   try {
-    const zipcode = 10012; // Default zip code for testing
+    const { zipcode } = req.body;
+
+    if (!zipcode) {
+      return res.status(400).json({ error: 'Zip code is required' });
+    }
 
     // Fetching latitude and longitude from OpenWeatherMap API
     const weatherResponse = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${key}`);
@@ -22,6 +38,23 @@ router.get('/airquality', async (req, res) => {
     const [currentData] = list;
     const { main } = currentData;
     const { aqi } = main;
+
+    if (aqi >= 1) {
+      const mailOptions = {
+        from: 'alexhackathon123@gmail.com',
+        to: 'yaojiejia0715@gmail.com', // User's email address
+        subject: 'Air Quality Alert',
+        text: `The air quality in your area is ${aqi}. It's advisable to take necessary precautions.`,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error('Error sending email:', error);
+        } else {
+          console.log('Email sent:', info.response);
+        }
+      });
+    }
 
     res.json({ airQualityIndex: aqi });
   } catch (error) {

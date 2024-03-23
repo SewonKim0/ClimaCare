@@ -3,20 +3,23 @@ import './homepage.css'
 export default function HomePage() {
   return (
     <div>
-      <form method='post' action='localhost:3000/airquality'>
-        <label className="form-field">
-          <p>State</p> 
+      <h1>Home Page</h1>
+      <p>This is the home page.</p>
+
+      <form method='post' action='http://localhost:3000/airquality'>
+        {/* <label>
+          State 
           <input type='text' name='state' required />
         </label>
 
         <label className="form-field">
           <p>City</p> 
           <input type='text' name='city' required/>
-        </label>
+        </label> */}
 
-        <label className="form-field">
-          <p>Zip Code</p> 
-          <input type='text' name='zip-code' required/>
+        <label>
+          Zip Code
+          <input type='text' name='zipcode' required/>
         </label>
 
         <div>
