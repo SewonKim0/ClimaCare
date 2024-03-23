@@ -5,17 +5,17 @@ export default function HomePage() {
     <div>
       <form method='post' action='localhost:3000/airquality'>
         <label>
-          State 
+          <p className="form-text">State</p> 
           <input type='text' name='state' required />
         </label>
 
         <label>
-          City 
+          <p className="form-text">City</p> 
           <input type='text' name='city' required/>
         </label>
 
         <label>
-          Zip Code
+          <p className="form-text">Zip Code</p> 
           <input type='text' name='zip-code' required/>
         </label>
 
