@@ -3,9 +3,6 @@ import './homepage.css'
 export default function HomePage() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>This is the home page.</p>
-
       <form method='post' action='localhost:3000/airquality'>
         <label>
           State 
