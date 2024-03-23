@@ -3,13 +3,13 @@ import './care.css'
 export default function HomePage() {
     return (
 <>
-<h1>How to take care of yourself in this situation</h1>
-<h2>Richmond Earthquake</h2>
-<div class='content'>
+<h1 className="title">How to take care of yourself in this situation</h1>
+<h2 className="subtitle">Richmond Earthquake</h2>
+<div className='content'>
 
-<div class='article'>
+<div className='article'>
   <h3>Before</h3>
-  <img src='1.png' alt='before'/>
+  <img className="article-img" src='1.png' alt='before'/>
   <h4>
 - Find a fire extinguisher <br></br>
 - Learn first aid <br></br>
@@ -18,9 +18,9 @@ export default function HomePage() {
   </h4>
 </div>
 
-<div class='article'>
+<div className='article'>
   <h3>During</h3>
-  <img src='2.png' alt='during'/>
+  <img className="article-img" src='2.png' alt='during'/>
   <h4>
 - Stay where you are <br></br>
 - Stand against a wall near the center of the building <br></br>
@@ -29,9 +29,9 @@ export default function HomePage() {
   </h4>
 </div>
 
-<div class='article'>
+<div className='article'>
   <h3>After</h3>
-  <img src='3.png' alt='after'/>
+  <img className="article-img" src='3.png' alt='after'/>
   <h4>
 - Turn on the radio <br></br>
 - Stay out of damaged buildings <br></br>
