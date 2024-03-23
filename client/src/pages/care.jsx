@@ -1,4 +1,5 @@
 import './care.css'
+
 export default function HomePage() {
     return (
 <>
