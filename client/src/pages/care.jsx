@@ -42,6 +42,23 @@ export default function HomePage() {
 </div>
 
 </div>
+
+<table>
+    <tr>
+        <th>Possible Symptoms</th>
+        <th>Suggestions</th>
+    </tr>
+
+    <tr>
+        <th>Faint/dizzy/nauseous</th>
+        <th>Visit </th>
+    </tr>
+
+    <tr>
+        <th>panicky/panic attacks/scared</th>
+        <th>Contact</th>
+    </tr>
+</table>
 </>
     )
 }
