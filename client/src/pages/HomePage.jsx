@@ -42,7 +42,12 @@ export default function HomePage({ userEmail }) {
       <div className="map"
         style={{
           height: showMap ? '14rem' : '0rem',
-        }}></div>
+        }}>
+          <img
+            src="richmond.png"
+            alt="An image of the map"
+          />
+        </div>
     </div>
   );
 }

@@ -83,5 +83,13 @@ form {
     border-radius: 0.5rem;
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: height 0.5s ease;
+}
+.map > img {
+    width: 100%;
+    height: auto;
 }
