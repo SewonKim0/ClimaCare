@@ -4,6 +4,14 @@ export default function HomePage() {
   return (
     <div>
       <form method='post' action='http://localhost:3000/airquality'>
+        {/* Logo */}
+        <div className="form-logo">
+          <img
+            src="logo.png"
+            alt="Image of the climacare logo"
+          />
+        </div>
+
         <label className="form-field">
           <p>State</p>
           <input type='text' name='state' required />

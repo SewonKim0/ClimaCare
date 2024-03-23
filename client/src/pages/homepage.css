@@ -20,11 +20,30 @@ form {
     backdrop-filter: blur(8px);
 }
 
+/* Form Logo */
+.form-logo {
+    width: 7rem;
+    height: 5rem;
+
+    position: absolute;
+    top: 0;
+    right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-logo > img {
+    width: 100%;
+    height: auto;
+}
+
 /* Form Field */
 .form-field {
     display: flex;
     flex-direction: row;
     padding: 0rem 2rem;
+    width: 80%;
 }
 .form-field > p {
     color: white;
