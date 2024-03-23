@@ -1,6 +1,9 @@
 import './homepage.css';
+import { useState } from "react";
 
 export default function HomePage({ userEmail }) {
+  const [showMap, setShowMap] = useState(false);
+
   return (
     <div>
       <form method='post' action='http://localhost:3000/airquality'>
@@ -11,6 +14,8 @@ export default function HomePage({ userEmail }) {
             alt="Image of the climacare logo"
           />
         </div>
+
+        <h2 className="form-title"> Enter Your Location: </h2>
 
         <label className="form-field">
           <p>State</p>
@@ -27,8 +32,17 @@ export default function HomePage({ userEmail }) {
           <input type='text' name='zipcode' required/>
         </label>
 
-        <input className="form-submit" type='submit' value='Send'/>
+        <input className="form-submit" type='submit' value='Send'
+          onClick={() => {
+            setShowMap(true)
+          }}/>
       </form>
+
+      {/* Map */}
+      <div className="map"
+        style={{
+          height: showMap ? '14rem' : '0rem',
+        }}></div>
     </div>
   );
 }
