@@ -8,7 +8,7 @@ export default function HomePage() {
 
 <div class='article'>
   <h3>Before</h3>
-  <img src='1.png' alt='plant pot'/>
+  <img src='1.png' alt='before'/>
   <h4>
 - Find a fire extinguisher <br></br>
 - Learn first aid <br></br>
@@ -19,7 +19,7 @@ export default function HomePage() {
 
 <div class='article'>
   <h3>During</h3>
-  <img src='2.png' alt='jewelry stand'/>
+  <img src='2.png' alt='during'/>
   <h4>
 - Stay where you are <br></br>
 - Stand against a wall near the center of the building <br></br>
@@ -30,7 +30,7 @@ export default function HomePage() {
 
 <div class='article'>
   <h3>After</h3>
-  <img src='3.png' alt='Christmas tree'/>
+  <img src='3.png' alt='after'/>
   <h4>
 - Turn on the radio <br></br>
 - Stay out of damaged buildings <br></br>
