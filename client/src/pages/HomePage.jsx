@@ -1,6 +1,6 @@
-import './homepage.css'
+import './homepage.css';
 
-export default function HomePage() {
+export default function HomePage({ userEmail }) {
   return (
     <div>
       <form method='post' action='http://localhost:3000/airquality'>
@@ -30,5 +30,5 @@ export default function HomePage() {
         <input className="form-submit" type='submit' value='Send'/>
       </form>
     </div>
-  )
+  );
 }
