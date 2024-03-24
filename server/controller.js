@@ -39,10 +39,10 @@ router.post('/airquality', async (req, res) => {
     const { main } = currentData;
     const { aqi } = main;
 
-    if (aqi >= 1) {
+    if (aqi >= 2) {
       const mailOptions = {
         from: 'alexhackathon123@gmail.com',
-        to: 'yaojiejia0715@gmail.com', // User's email address
+        to: 'kathyngananhtran@gmail.com', // User's email address
         subject: 'Air Quality Alert',
         text: `The air quality in your area is ${aqi}. It's advisable to take necessary precautions.`,
       };
