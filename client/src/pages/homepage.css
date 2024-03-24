@@ -248,3 +248,13 @@ footer {
   .credit>p {
     font-size: 0.9rem;
   }
+
+/* Profile Indicator */
+.profile-indicator {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

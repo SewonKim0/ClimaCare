@@ -1,5 +1,6 @@
 import './homepage.css';
 import { useState } from "react";
+import { useLocation } from 'react-router-dom';
 
 // pointers data
 const POINTERS_DATA = [
@@ -43,15 +44,26 @@ const POINTERS_DATA = [
   }
 ]
 
-export default function HomePage({ userEmail }) {
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+export default function HomePage() {
   const [showMap, setShowMap] = useState(false);
   // pointers modal state data
   const [ ptrIndex, setPtrIndex ] = useState(0);
   const [ showModal, setShowModal ] = useState(false);
   const [ modalVisible, setModalVisible ] = useState(false);
 
+  // get email from query vars
+  const query = useQuery()
+  const email = query.get("email")
+
   return (
     <>
+    {/* Profile Indicator */}
+    <p className="profile-indicator"> Logged in as {email || "N/A"} </p>
+
     <h1 id='title'>Welcome to ClimaCare</h1>
     <div>
       <form class="form" 
