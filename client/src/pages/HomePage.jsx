@@ -5,6 +5,8 @@ export default function HomePage({ userEmail }) {
   const [showMap, setShowMap] = useState(false);
 
   return (
+    <>
+    <h1 id='title'>Welcome to ClimaCare</h1>
     <div>
       <form method='post' action='http://localhost:3000/airquality'>
         {/* Logo */}
@@ -55,5 +57,28 @@ export default function HomePage({ userEmail }) {
           />         
         </div>
     </div>
+
+    <footer>
+          <div class='col1'>
+            <div class="logo2-container">
+              <img id='logo2' src ='logo.png' alt='Smart Cycle Logo'/>
+            </div>
+            
+            <div class='form'>
+              <h3>Stay up-to-date with our monthly newsletter</h3>
+              <form action='#' method ='post2' class = 'newsletter'/>
+              <label for ='email'>Email</label>
+              <input type ='email' id ='email' name = 'email' placeholder='Your Email Address' required/>
+            </div>
+          </div>
+          
+          <div class='credit'>
+            <h2>Created by</h2>
+            <p>Sewon Kim</p>
+            <p>Alex Jia</p>
+            <p>Kathy Tran</p>
+          </div>
+        </footer>
+    </>
   );
 }

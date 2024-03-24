@@ -9,8 +9,8 @@ form {
     margin-top: 2rem;
     padding: 20px;
     border-radius: 0.5rem;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 0.9em;
+    font-family: Lora;
+    font-size: 19px;
     line-height: 1.4em;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,8 @@ form {
     padding: 0.3rem;
     width: 5rem;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 25px;
+    font-family: Lora;
 
     margin-top: 0.5rem;
     margin-left: 50%;
@@ -102,3 +103,86 @@ form {
     width: 3rem;
     height: 3rem;
 }
+
+#title {
+    color: white;
+    margin-top: 40px;
+    font-family: Playfair Display;
+}
+
+/* Footer */
+footer {
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #0F382E;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 100%;
+  
+    padding: 1rem 3rem;
+  }
+  
+  footer>* {
+    color: #E4D8C5;
+  }
+  
+  .col1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo2-container {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  #logo2 {
+    width: 20%;
+  }
+  
+  .form>* {
+    font-family: Playfair Display;
+  }
+  
+  #email {
+    font-family: Playfair Display;
+  }
+  
+  .form label {
+    font-family: Playfair Display;
+  }
+  
+  .credit {
+    text-align: center;
+  }
+  
+  .credit p {
+    color: white;
+  }
+  
+  #logo {
+    font-family: Playfair Display;
+  }
+  
+  .credit>* {
+    font-family: Playfair Display;
+  }
+  
+  .credit>h2 {
+    width: max-content;
+    margin-bottom: 0.3rem;
+  }
+  
+  .credit>p {
+    font-size: 0.9rem;
+  }
