@@ -47,6 +47,12 @@ export default function HomePage({ userEmail }) {
             src="richmond.png"
             alt="An image of the map"
           />
+
+          <img
+            className="ptr"
+            src="icon.gif"
+            alt="A ptr"
+          />         
         </div>
     </div>
   );
