@@ -43,40 +43,36 @@ export default function HomePage() {
 
 </div>
 
-<h1>Food Earthquake Toolkit by Wakefern</h1>
-<h2>As an attempt to tackle climate change impacts, Wakefern Bowl & Basket is proud to provide discounts for Earthquake and Flood victims</h2>
+<h1 id='title2'>Food Earthquake Toolkit by Wakefern</h1>
+<h2 id='subtitle2'>As an attempt to tackle climate change, Wakefern Bowl & Basket is proud to provide discounts for Earthquake and Flood victims</h2>
+
+<img id='wakefern' src='wakefern.png' alt='Wakefern'/>
 
 <div className='content2'>
 
 <div className='article2'>
   <h3>Spring water</h3>
-  <img className="article-img2" src='water.png' alt='before'/>
+  <img className="article-img2" src='water.png' alt='water'/>
   <h4>
-- Each bottle is 16 fl oz, the amount suitable for storing during an earthquake
+- Each bottle is 16 fl oz, the amount suitable for storing during an earthquake <br></br>
 - Clean and crisp taste for hydrating during an earthquake
   </h4>
 </div>
 
 <div className='article2'>
   <h3>Dried Cranberries</h3>
-  <img className="article-img2" src='fruit.png' alt='during'/>
+  <img className="article-img2" src='fruit.png' alt='fruits'/>
   <h4>
-- Stay where you are <br></br>
-- Stand against a wall near the center of the building <br></br>
-- Stay in the open away from power lines or anything that might fall <br></br>
-- Don't use matches, candles, or any flame
+- Light packaging easy to carry around <br></br>
+- Lightweight and sweet to provide energy during Earthquake
   </h4>
 </div>
 
 <div className='article2'>
   <h3>Canned Beef</h3>
-  <img className="article-img2" src='meat.png' alt='after'/>
+  <img className="article-img2" src='meat.png' alt='beef'/>
   <h4>
-- Turn on the radio <br></br>
-- Stay out of damaged buildings <br></br>
-- Be careful around broken glass and debris <br></br>
-- Be careful of chimneys (they may fall on you) <br></br>
-- Stay away from beaches <br></br>
+- Protein necessary for staying strong during the earthquake
   </h4>
 </div>
 

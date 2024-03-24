@@ -11,12 +11,13 @@
 .article {
   border: 5px solid transparent;
   box-sizing: border-box;
-  background-color: #96E1D8;
+  background-color: #A3C8CB;
   padding: 35px;
   margin: 1%;
   border-radius: 80px;
   text-align: center;
   animation: floatAnimation 1.5s infinite alternate ease-in-out;
+  margin-bottom: 120px;
 }
 
 @keyframes floatAnimation {
@@ -57,6 +58,9 @@ h4 {
 .title {
   color: white;
   margin-top: 40px;
+  background-color: #6E9699;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 .subtitle {
   color: white;
@@ -149,4 +153,81 @@ footer>* {
 
 .credit>p {
   font-size: 0.9rem;
+}
+
+/* Second article*/
+
+.content2 {
+  margin-top: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  margin-bottom: 20px;
+}
+
+.article2 {
+  border: 5px solid transparent;
+  box-sizing: border-box;
+  background-color: #A3C8CB;
+  padding: 35px;
+  margin: 1%;
+  border-radius: 80px;
+  text-align: center;
+  animation: floatAnimation 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.article2>* {
+  font-family: Playfair Display;
+  color: black;
+}
+.article2>h3 {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+.article-img2 {
+  width: 7rem;
+  height: auto;
+}
+
+#title2 {
+color: white;
+background-color: #6E9699;
+margin-bottom: 30px;
+padding: 20px;
+}
+
+#subtitle2 {
+color: white;
+width: 50%;
+margin-left: 25%;
+margin-bottom: 50px;
+}
+
+#wakefern {
+  width: 50%;
+  margin-left: 25%;
 }
