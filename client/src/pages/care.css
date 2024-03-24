@@ -73,3 +73,80 @@ table {
 table>* {
     font-weight: normal;
 }
+
+/* Footer */
+footer {
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0F382E;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 100%;
+
+  padding: 1rem 3rem;
+}
+
+footer>* {
+  color: #E4D8C5;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo2-container {
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#logo2 {
+  width: 20%;
+}
+
+.form>* {
+  font-family: Playfair Display;
+}
+
+#email {
+  font-family: Playfair Display;
+}
+
+.form label {
+  font-family: Playfair Display;
+}
+
+.credit {
+  text-align: center;
+}
+
+.credit p {
+  color: white;
+}
+
+#logo {
+  font-family: Playfair Display;
+}
+
+.credit>* {
+  font-family: Playfair Display;
+}
+
+.credit>h2 {
+  width: max-content;
+  margin-bottom: 0.3rem;
+}
+
+.credit>p {
+  font-size: 0.9rem;
+}

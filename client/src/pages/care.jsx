@@ -59,6 +59,28 @@ export default function HomePage() {
         <th>Contact</th>
     </tr>
 </table>
+
+<footer>
+          <div className='col1'>
+            <div className="logo2-container">
+              <img id='logo2' src ='logo.png' alt='Smart Cycle Logo'/>
+            </div>
+            
+            <div className='form'>
+              <h3>Stay up-to-date with our monthly newsletter</h3>
+              <form action='#' method ='post2' class = 'newsletter'/>
+              <label for ='email'>Email</label>
+              <input type ='email' id ='email' name = 'email' placeholder='Your Email Address' required/>
+            </div>
+          </div>
+          
+          <div className='credit'>
+            <h2>Created by</h2>
+            <p>Sewon Kim</p>
+            <p>Alex Jia</p>
+            <p>Kathy Tran</p>
+          </div>
+        </footer>
 </>
     )
 }
