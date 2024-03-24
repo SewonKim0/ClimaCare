@@ -82,7 +82,9 @@ export default function HomePage({ userEmail }) {
         </label>
 
         <input className="form-submit" type='submit' value='Send'
-          onClick={() => {
+          onClick={(event) => {
+            event.preventDefault()
+            
             setShowMap(true)
           }}/>
       </form>
