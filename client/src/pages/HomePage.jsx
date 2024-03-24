@@ -1,8 +1,54 @@
 import './homepage.css';
 import { useState } from "react";
 
+// pointers data
+const POINTERS_DATA = [
+  {
+    left: "30%",
+    top: "50%",
+    content: <div>
+      <h2>Potential Earthquake</h2>
+      <ul>
+        <li> Impact Radius: 2km </li>
+        <li> Air Quality: 1 </li>
+        <li> Safety: avoid high-rise buildings, stay in open areas </li>
+      </ul>  
+    </div>
+  },
+  {
+    left: "70%",
+    top: "75%",
+    content: <div>
+      <h2>Flood Warning</h2>
+      <ul>
+        <li> High Water Levels: ~3 inches of rainfall above yearly average </li>
+        <li> Air Quality: 3 </li>
+        <li> Impact Radius: 14km </li>
+        <li> Expect humid climates, avoid low ground </li>
+      </ul>  
+    </div>
+  },
+  {
+    left: "85%",
+    top: "15%",
+    content: <div>
+      <h2>Potential Hurricane</h2>
+      <ul>
+        <li> Hurricane Formation Risk: moderate/high </li>
+        <li> Air Quality: 3 </li>
+        <li> Impact Radius: 4km </li>
+        <li> Take cover inside reinforced buildings, avoid remote areas </li>
+      </ul>  
+    </div>
+  }
+]
+
 export default function HomePage({ userEmail }) {
   const [showMap, setShowMap] = useState(false);
+  // pointers modal state data
+  const [ ptrIndex, setPtrIndex ] = useState(0);
+  const [ showModal, setShowModal ] = useState(false);
+  const [ modalVisible, setModalVisible ] = useState(false);
 
   return (
     <>
@@ -50,21 +96,61 @@ export default function HomePage({ userEmail }) {
             alt="An image of the map"
           />
 
-          <img
-            className="ptr"
-            src="icon.gif"
-            alt="A ptr"
-          />         
+          {/* Pointers */}
+          {POINTERS_DATA.map((pointerData, pointerIndex) => (
+            <div className="ptr" 
+              onClick={() => {
+                setPtrIndex(pointerIndex)
+                setShowModal(true)
+                setTimeout(() => {
+                  setModalVisible(true)
+                }, 100)
+              }}
+              key={pointerIndex} 
+              style={{
+                left: pointerData.left,
+                top: pointerData.top,
+              }}>
+
+              <img
+                src="icon.png"
+                alt="An image of a pointer"
+              />
+            </div>
+          ))}
+
+          {/* Pointers Modal */}
+          <div className="pointers-modal"
+            style={{
+              display: showModal ? 'block' : 'none',
+              opacity: modalVisible ? 1 : 0,
+            }}>
+            {POINTERS_DATA[ptrIndex].content}
+
+            <button className="modal-close"
+              onClick={() => {
+                setModalVisible(false)
+                setTimeout(() => {
+                  setShowModal(false)
+                }, 600)
+              }}> Close
+            </button>
+          </div>
+          <div className="pointers-bg"
+            style={{
+              display: showModal ? 'block' : 'none',
+              opacity: modalVisible ? 1 : 0,
+            }}></div>
         </div>
     </div>
 
     <footer>
-          <div class='col1'>
-            <div class="logo2-container">
+          <div className='col1'>
+            <div className="logo2-container">
               <img id='logo2' src ='logo.png' alt='Smart Cycle Logo'/>
             </div>
             
-            <div class='form'>
+            <div className='form'>
               <h3>Stay up-to-date with our monthly newsletter</h3>
               <form action='#' method ='post2' class = 'newsletter'/>
               <label for ='email'>Email</label>
@@ -72,7 +158,7 @@ export default function HomePage({ userEmail }) {
             </div>
           </div>
           
-          <div class='credit'>
+          <div className='credit'>
             <h2>Created by</h2>
             <p>Sewon Kim</p>
             <p>Alex Jia</p>
