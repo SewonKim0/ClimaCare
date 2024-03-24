@@ -31,7 +31,7 @@ app.get('/profile', requiresAuth(), (req, res) => {
   const { given_name, family_name, email } = req.oidc.user;
 
   // Display user information
-  res.redirect(`http://localhost:5174/?email=${email}`
+  res.redirect(`http://localhost:5173/?email=${email}`
   
   );});
 
