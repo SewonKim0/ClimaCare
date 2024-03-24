@@ -54,7 +54,8 @@ export default function HomePage({ userEmail }) {
     <>
     <h1 id='title'>Welcome to ClimaCare</h1>
     <div>
-      <form method='post' action='http://localhost:3000/airquality'>
+      <form class="form" 
+      method='post' action='http://localhost:3000/airquality'>
         {/* Logo */}
         <div className="form-logo">
           <img
