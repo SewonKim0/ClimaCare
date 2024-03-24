@@ -258,3 +258,16 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+/* Healthcare Button */
+.healthcare-button {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: lightblue;
+  border: 3px solid black;
+  border-radius: 0.5rem;
+}
+.healthcare-button:hover {
+  background-color: white;
+}

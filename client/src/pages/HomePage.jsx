@@ -13,6 +13,7 @@ const POINTERS_DATA = [
         <li> Impact Radius: 2km </li>
         <li> Air Quality: 1 </li>
         <li> Safety: avoid high-rise buildings, stay in open areas </li>
+        <a href="/care"> <button className="healthcare-button"> Healthcare Suggestions </button> </a>
       </ul>  
     </div>
   },
@@ -26,6 +27,7 @@ const POINTERS_DATA = [
         <li> Air Quality: 3 </li>
         <li> Impact Radius: 14km </li>
         <li> Expect humid climates, avoid low ground </li>
+        <a href="/care"> <button className="healthcare-button"> Healthcare Suggestions </button> </a>
       </ul>  
     </div>
   },
@@ -39,6 +41,7 @@ const POINTERS_DATA = [
         <li> Air Quality: 3 </li>
         <li> Impact Radius: 4km </li>
         <li> Take cover inside reinforced buildings, avoid remote areas </li>
+        <a href="/care"> <button className="healthcare-button"> Healthcare Suggestions </button> </a>
       </ul>  
     </div>
   }
