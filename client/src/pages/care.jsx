@@ -5,15 +5,24 @@ import { useState } from "react"
 {/* I was briefly caught in a wildfire and may have inhaled some smoke. Give me medical tips. */}
 
 // chatbot description
-const CHATBOT_DESCRIPTION = [
-  `
+const CHATBOT_DESCRIPTION = {
+  wildfire: `
   Experiencing smoke inhalation from a wildfire can be concerning, but there are steps you can take to ensure your safety and well-being. Here are some medical tips to consider:
   Seek Fresh Air: Move to an area with clean air as soon as possible. This may mean going indoors if you're outside, or finding a location away from the smoke.
   Stay Hydrated: Drink plenty of water to keep yourself hydrated. Inhaling smoke can cause irritation to your respiratory system, and staying hydrated can help alleviate some of the discomfort.
   Rest: Allow your body time to recover. If youre feeling unwell or experiencing symptoms like coughing, shortness of breath, or chest pain, take it easy and rest.
   Monitor Symptoms: Keep an eye on your symptoms. If you experience severe symptoms such as difficulty breathing, persistent coughing, chest pain, or dizziness, seek medical attention immediately.
-  `
-]
+  `,
+  canned: <div>
+    <p>During a natural disaster, such as earthquakes, hurricanes, or floods, access to fresh food may become limited or unavailable due to disrupted supply chains, power outages, or infrastructure damage. In such situations, canned beef can be an invaluable resource for several reasons:
+      Long Shelf Life: Canned beef has a long shelf life, often lasting several years if stored properly. This makes it a reliable source of sustenance during prolonged periods of emergency when access to fresh food is not possible.
+      Nutritional Value: Canned beef is rich in protein, essential vitamins, and minerals like iron and zinc. These nutrients are crucial for maintaining energy levels, supporting muscle function, and boosting immune health, which are especially important during times of stress and uncertainty.
+    </p>
+    <a href="https://www.shoprite.com/sm/pickup/rsid/3000/product/libbys-corned-beef-12-oz-id-00039000081047">
+      Wakefern - Canned Corned Beef
+    </a>
+  </div>
+}
 
 export default function HomePage() {
   const [chatbotDesc, setChatbotDesc] = useState('')
@@ -109,20 +118,35 @@ export default function HomePage() {
         event.preventDefault()
 
         // render chatbot desc
-        const words = CHATBOT_DESCRIPTION[0].split(' ')
-        function renderNextWord(wordIndex) {
-          if (wordIndex > words.length) return
-
-          setChatbotDesc((currText) => {
-            return currText + " " + words[wordIndex]
-          })
+        const inputWords = event.target.previousElementSibling.value.split(' ')
+        if (inputWords.includes("wildfire")) {
           setTimeout(() => {
-            renderNextWord(wordIndex + 1)
-          }, 100)
+            setChatbotDesc(CHATBOT_DESCRIPTION["wildfire"])
+          }, 3000)
+        } else if (inputWords.includes("canned")) {
+          setTimeout(() => {
+            setChatbotDesc(CHATBOT_DESCRIPTION["canned"])
+          }, 3000)
+        } else {
+          setTimeout(() => {
+            setChatbotDesc("Sorry, I don't have information on that")
+          }, 3000)
         }
-        setTimeout(() => {
-          renderNextWord(0)
-        }, 3000)
+
+        // const words = CHATBOT_DESCRIPTION["smoke"].split(' ')
+        // function renderNextWord(wordIndex) {
+        //   if (wordIndex > words.length) return
+
+        //   setChatbotDesc((currText) => {
+        //     return currText + " " + words[wordIndex]
+        //   })
+        //   setTimeout(() => {
+        //     renderNextWord(wordIndex + 1)
+        //   }, 100)
+        // }
+        // setTimeout(() => {
+        //   renderNextWord(0)
+        // }, 1000)
       }}>Submit</button>
   </form>
 </div>
