@@ -1,6 +1,23 @@
 import './care.css'
+import { useState } from "react"
+
+// input
+{/* I was briefly caught in a wildfire and may have inhaled some smoke. Give me medical tips. */}
+
+// chatbot description
+const CHATBOT_DESCRIPTION = [
+  `
+  Experiencing smoke inhalation from a wildfire can be concerning, but there are steps you can take to ensure your safety and well-being. Here are some medical tips to consider:
+  Seek Fresh Air: Move to an area with clean air as soon as possible. This may mean going indoors if you're outside, or finding a location away from the smoke.
+  Stay Hydrated: Drink plenty of water to keep yourself hydrated. Inhaling smoke can cause irritation to your respiratory system, and staying hydrated can help alleviate some of the discomfort.
+  Rest: Allow your body time to recover. If youre feeling unwell or experiencing symptoms like coughing, shortness of breath, or chest pain, take it easy and rest.
+  Monitor Symptoms: Keep an eye on your symptoms. If you experience severe symptoms such as difficulty breathing, persistent coughing, chest pain, or dizziness, seek medical attention immediately.
+  `
+]
 
 export default function HomePage() {
+  const [chatbotDesc, setChatbotDesc] = useState('')
+
     return (
 <>
 <h1 className="title">How to take care of yourself in this situation</h1>
@@ -76,6 +93,38 @@ export default function HomePage() {
   </h4>
 </div>
 
+</div>
+
+{/* Chatbot */}
+<h1 id='title3'>Symptom Checker</h1>
+
+<div className="chatbot-container">
+  <div className="chatbot-output">
+    <p>{chatbotDesc}</p>
+  </div>
+  <form className="chatbot-input">
+    <input type="text" placeholder="Type your symptoms here"/>
+    <button type="submit"
+      onClick={(event) => {
+        event.preventDefault()
+
+        // render chatbot desc
+        const words = CHATBOT_DESCRIPTION[0].split(' ')
+        function renderNextWord(wordIndex) {
+          if (wordIndex > words.length) return
+
+          setChatbotDesc((currText) => {
+            return currText + " " + words[wordIndex]
+          })
+          setTimeout(() => {
+            renderNextWord(wordIndex + 1)
+          }, 100)
+        }
+        setTimeout(() => {
+          renderNextWord(0)
+        }, 3000)
+      }}>Submit</button>
+  </form>
 </div>
 
 <footer>
